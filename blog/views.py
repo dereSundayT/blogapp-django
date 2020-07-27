@@ -5,14 +5,14 @@ from django.views.generic import ListView
 
 # Create your views here.
 
-
+"""
 def home(request):
     context = {
         'title': 'Home Page',
          'posts':Post.objects.all()
          }
     return render(request, 'blog/index.html', context)
-
+"""
 class PostListView(ListView):
     model = Post
     template_name = 'blog/index.html'
