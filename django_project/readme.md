@@ -6,3 +6,8 @@ Add this to the last section of settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 {% load crispy_forms_tags %}
 {{ form|crispy }}
+
+changing the redirect url when logged in
+
+Pillow was installed for Image Management
+    
