@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 #auto_now=True ::update the dateTime everytime the post was updated
 #auto_now_add=True::set the dateTime only when the object was created, you cannot update it
@@ -14,3 +15,7 @@ class Post(models.Model):
  
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("post-detail", kwargs={"pk": self.pk})
+    
